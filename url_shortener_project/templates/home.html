@@ -1,0 +1,14 @@
+{{define "title"}}Shorten a URL{{end}}
+{{define "content"}}
+<h1>Shorten a URL</h1>
+<form method="POST" action="/shorten">
+  <div class="row">
+    <label for="long_url">Long URL</label>
+    <input id="long_url" name="long_url" type="text" placeholder="https://example.com/very/long/link" />
+  </div>
+  <div class="row"><button type="submit">Shorten</button></div>
+</form>
+
+{{if .Error}}<p class="error">{{.Error}}</p>{{end}}
+{{end}}
+{{template "base" .}}

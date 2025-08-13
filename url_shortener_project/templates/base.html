@@ -1,0 +1,24 @@
+{{define "base"}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{block "title" .}}URL Shortener{{end}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;line-height:1.4}
+    .card{max-width:720px;margin:auto;padding:1.5rem;border:1px solid #ddd;border-radius:12px}
+    .row{margin:.5rem 0}
+    input[type=text]{width:100%;padding:.6rem;border:1px solid #bbb;border-radius:8px}
+    button{padding:.6rem 1rem;border:0;border-radius:8px;background:#111;color:#fff;cursor:pointer}
+    .error{color:#b00020;margin:.5rem 0}
+    code,a{word-break:break-all}
+  </style>
+</head>
+<body>
+  <div class="card">
+    {{template "content" .}}
+  </div>
+</body>
+</html>
+{{end}}

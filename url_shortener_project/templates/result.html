@@ -1,0 +1,8 @@
+{{define "title"}}Your Short URL{{end}}
+{{define "content"}}
+<h1>Done 🎉</h1>
+<p>Your shortened URL:</p>
+<p><a href="{{.ShortURL}}">{{.ShortURL}}</a></p>
+<p><a href="/">Shorten another</a></p>
+{{end}}
+{{template "base" .}}
